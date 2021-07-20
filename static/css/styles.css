@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Code, sans-serif;
+  letter-spacing: 0.2rem;
+}
+
+@font-face {
+  font-family: Code;
+  src: url(./../font/CODE\ Bold.otf);
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Estilos da página index.html */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(51, 89, 236);
+  width: 100%;
+}
+
+nav a img {
+  max-width: 100%;
+  width: 2.5rem;
+  padding: 0.3rem;
+  margin-left: 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  padding: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease-out;
+}
+
+nav ul li a:hover {
+  color: #ff01ed;
+}
+
+header#banner {
+  background-color: #c3ffff;
+  padding: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 30rem;
+}
+
+header#banner img {
+  width: 100%;
+  border-radius: 40px;
+}
+
+header#banner div {
+  width: 100%;
+}
+
+header#banner div h1 {
+  font-size: 7rem;
+  color: #3359ec;
+  text-shadow: 2px 2px 5px #00000050;
+}
+
+header#banner div h2 {
+  font-size: 2.4rem;
+  color: #ff01ed;
+  text-shadow: 2px 2px 5px #00000050;
+  margin-top: 20px;
+}
+
+section#playlist {
+  max-width: 100%;
+  padding: 2rem;
+  overflow-x: auto;
+}
+
+section#playlist h3 {
+   text-align: center;
+   color: #3359ec;
+   font-size: 3rem;
+   text-shadow: 1px 1px 2px #ff01ed;
+   letter-spacing: 0.3rem;
+   margin-bottom: 3rem;
+ }
+
+ section#playlist table {
+   border-collapse: collapse;
+   width: 100%;
+   border-spacing: 0;
+ }
+
+section#playlist table th, td {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+
+section#playlist table a {
+   padding: 1rem;
+   color: #3359ec;
+   text-decoration: none;
+   transition: all 0.3s ease-in-out;
+ }
+
+ section#playlist table a:hover{
+    color: #ff01ed;
+ }
+
+ footer p {
+   min-height: 4rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ footer hr {
+   width: 60%;
+   margin: auto;
+   border: 0.2px solid #3359ec;
+ }
+
+ footer a {
+   text-decoration: none;
+   color: #3359ec;
+ }
+ 
+ a:hover {
+   color: #ff01ed;
+ }
+/* Fim do estilos da página index.html */
+
+
+/* Estilos da página new.html */
+
+section#new {
+  background: linear-gradient(
+    #3359ec 50%,
+    #fff 50%
+  );
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#new a img#home{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  margin: 0;
+  padding: 1rem;
+}
+
+section#new a img#gif{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 7rem;
+  margin: 0;
+  padding: 1rem;
+}
+
+
+section#new div#card {
+  position: relative;
+  background-color: #c3ffff;
+  padding: 30px;
+  border-radius: 2%;
+  border: 1px solid #001052;
+  box-shadow: 5px 5px 1px 0px #ff01ed90;
+  width: 400px;
+}
+
+section#new div.label-float {
+  position: relative;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+section#new div.label-float input {
+  width: 100%;
+  padding: 5px 5px;
+  display: inline-block;
+  border: 0;
+  border-bottom: 2px solid #0130ec;
+  background-color: transparent;
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all 0.3s ease-out;
+  border-radius: 0;
+}
+
+section#new div.label-float input:focus {
+  border-bottom: 2px solid #4c6ceb;
+}
+
+section#new div.label-float label {
+  color: #0130ec;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all 0.3s ease-out;
+}
+
+section#new div.label-float input:focus + label,
+section#new div.label-float input:valid + label {
+  font-size: 13px;
+  margin-top: 0;
+  color: #4c6ceb;
+}
+
+section#new div.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+section#new button {
+  background-color: transparent;
+  border-color: #0130ec;
+  color: #0130ec;
+  padding: 0.8rem;
+  font-size: 12pt;
+  margin-top: 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.4s ease-out;
+}
+
+section#new button:hover {
+  background-color: #0130ec;
+  color: #fff;
+}
+
+section#new h4 {
+  text-align: center;
+  color: #0130ec;
+  font-size: 3rem;
+  text-shadow: 1px 1px 2px #ff01ed;
+  margin-bottom: 2rem;
+}
+/* Fim dos estilos da página new.html */
+
+/* Estilos do modal */
+
+section.modal{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #00000080;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+}
+
+section.modal div#card{
+  width: 30rem;
+  position: relative;
+  background-color: #fff;
+  border-radius: .5rem;
+}
+
+section.modal div#card h2{
+  padding: 2rem;
+  margin: 0;
+  color: #0130ec;
+}
+
+section.modal div#card a#fechar{
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 2rem;
+  color: #ff01ed;
+  padding: 1.5rem;
+}
+
+section.modal div#card a#fechar:hover{
+  color: #fd9bf7;
+}
+
+section.modal div#card hr{
+  width: 90%;
+  margin: 0 auto;
+}
+
+section.modal div#card p{
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+section.modal div#card div#btns{
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem 2rem 2rem;
+}
+
+section.modal div#card div#btns a{
+  text-decoration: none;
+  padding: .9rem;
+  border-radius: .5rem;
+  width: 7rem;
+  text-align: center;
+}
+
+section.modal div#card div#btns a.btn-cancelar{
+  background-color: #fff;
+  color: #ff01ed;
+  border: solid 1px #ff01ed;
+  margin-right: 1rem;
+  transition: all .5s ease-out;
+}
+
+section.modal div#card div#btns a.btn-cancelar:hover{
+  background-color: #ff01ed;
+  color: #fff;
+}
+
+section.modal div#card div#btns a.btn-apagar{
+  background-color: #fff;
+  color: #0130ec;
+  border: solid 1px #0130ec;
+  transition: all .5s ease-out;
+}
+
+section.modal div#card div#btns a.btn-apagar:hover{
+  background-color: #0130ec;
+  color: #fff;
+}
+
+
+
+/* Fim dos estilos do modal */

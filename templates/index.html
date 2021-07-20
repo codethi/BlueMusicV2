@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang='pt-br'>
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name='viewport' content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href=" {{ url_for('static', filename='css/styles.css') }} ">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <title>BlueMusic</title>
+   </head>
+
+   <body>
+      
+      <nav>
+         <a href="/">
+            <img src=" {{ url_for('static', filename='img/minilogo.png') }} " alt="">
+         </a>
+
+         <ul>
+            <li>
+              <a href="">Ouvir</a>
+            </li>
+            <li>
+               <a href="/new">Nova Música</a>
+            </li>
+         </ul>
+      </nav>
+
+      <header id="banner">
+
+         <div>
+            <h1>
+               O que você ouve
+               <i class="fa fa-play-circle" aria-hidden="true"></i>
+               enquanto programa?
+            </h1>
+            <h2>Crie aqui sua própria playlist</h2>
+         </div>
+
+         <img src="{{url_for('static', filename='img/img-home.png')}}" alt="">
+
+      </header>
+
+      <section id="playlist">
+
+         <h3>Playlist</h3>
+
+         <table>
+
+            <thead>
+               <tr>
+                  <th>#</th>
+                  <th>Nome</th>
+                  <th>Artista</th>
+                  <th>Player</th>
+                  <th>Ações</th>
+               </tr>
+            </thead>
+
+            <tbody>
+               {% for m in musicas %}
+               <tr>
+                  <td>{{m.id}}</td>
+                  <td>{{m.nome}}</td>
+                  <td>{{m.artista}}</td>
+                  <td>
+                     <audio controls src="{{m.link}}"></audio>
+                  </td>
+                  <td>
+                     <a href="/edit/{{m.id}}">Editar</a>
+                     <a href="/{{m.id}}">Apagar</a>
+                  </td>
+               </tr>
+               {% endfor %}
+            </tbody>
+
+         </table>
+
+      </section>
+
+      {% if musica != undefined %}
+      <section class="modal">
+         <div id="card">
+
+            <a href="/#playlist" id="fechar"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <h2>Confirmação</h2>
+            <hr>
+
+            <p>Deseja realmente apagar a musica {{musica.nome}} </p>
+            <div id="btns">
+               <a class="btn-cancelar" href="/#playlist">Cancelar</a>
+               <a class="btn-apagar" href="/delete/{{musica.id}}">Apagar</a>
+            </div>
+         </div>
+      </section>
+      {% endif %}
+
+      <footer>
+         <hr>
+         <p>Todos os direitos reservados: 
+         <a target="_blank" href="https://thicode.netlify.app/">Thi Code</a> &copy;
+      </p>
+      </footer>
+
+   </body>
+</html>
